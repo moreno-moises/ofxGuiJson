@@ -1,0 +1,48 @@
+{
+  "gui": {
+    "title": "Simple Application",
+    "settings_file": "settings.xml",
+    "width": 1000,
+    "height": 2000,
+    "position": {
+      "x": 0,
+      "y": 0
+    }
+  },
+      "gui_elements": [
+        {
+          "type": "label",
+          "label": "Emotibit: 192.168.0.24",
+          "id": "emotibitLabel",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        },
+        {
+          "type": "toggle",
+          "label": "RECORD",
+          "id": "recordToggle",
+          "relative_position": {
+            "anchor_id": "emotibitLabel",
+            "offset": {
+              "x": 230,
+              "y": 0
+            }
+          },
+          "size": {
+            "width": 80,
+            "height": 30
+          },
+          "default": false
+        }
+      ]
+    }
+
+
+
+
