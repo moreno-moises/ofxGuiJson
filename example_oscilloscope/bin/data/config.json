@@ -1,15 +1,18 @@
 {
-  "gui": {
-    "title": "Simple Application",
-    "settings_file": "settings.xml",
-    "width": 1000,
-    "height": 2000,
-    "position": {
-      "x": 0,
-      "y": 0
-    }
-  },
-      "gui_elements": [
+  "background_color": [255, 255, 255],
+  "panels": [
+    {
+      "gui": {
+        "title": "Simple Application",
+        "settings_file": "settings.xml",
+        "width": 250,
+        "height": 200,
+        "position": {
+          "x": 0,
+          "y": -15
+        }
+      },
+      "elements": [
         {
           "type": "label",
           "label": "Emotibit: 192.168.0.24",
@@ -24,25 +27,262 @@
           }
         },
         {
+          "type": "label",
+          "label": "Emotibit device list",
+          "id": "deviceListLabel",
+          "position": {
+            "x": 0,
+            "y": 40
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        }
+      ]
+    },
+    {
+      "gui": {
+        "title": "Control Panel",
+        "settings_file": "settings2.xml",
+        "width": 300,
+        "height": 200,
+        "position": {
+          "x": 201, 
+          "y": -15
+        }
+      },
+      "elements": [
+        {
           "type": "toggle",
           "label": "RECORD",
           "id": "recordToggle",
-          "relative_position": {
-            "anchor_id": "emotibitLabel",
-            "offset": {
-              "x": 230,
-              "y": 0
-            }
+          "position": {
+            "x": 0,
+            "y": 0
           },
           "size": {
-            "width": 80,
+            "width": 100,
+            "height": 30
+          },
+          "default": false
+        },
+        {
+          "type": "label",
+          "label": "Status: RECORDING",
+          "id": "statusLabel",
+          "position": {
+            "x": 0,
+            "y": 40
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        }
+      ]
+    },
+    {
+      "gui": {
+        "title": "Mode Panel",
+        "settings_file": "settings3.xml",
+        "width": 300,
+        "height": 200,
+        "position": {
+          "x": 402, 
+          "y": -15
+        }
+      },
+      "elements": [
+        {
+          "type": "toggle",
+          "label": "HIBERNATING",
+          "id": "hibernatingToggle",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 150,
+            "height": 30
+          },
+          "default": false
+        },
+        {
+          "type": "label",
+          "label": "Mode: ACTIVE",
+          "id": "modeLabel",
+          "position": {
+            "x": 0,
+            "y": 40
+          },
+          "size": {
+            "width": 150,
+            "height": 30
+          }
+        }
+      ]
+    },
+    {
+      "gui": {
+        "title": "Status Panel",
+        "settings_file": "settings4.xml",
+        "width": 300,
+        "height": 200,
+        "position": {
+          "x": 603, 
+          "y": -15
+        }
+      },
+      "elements": [
+        {
+          "type": "label",
+          "label": "Battery Level: 85%",
+          "id": "batteryLevelLabel",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        },
+        {
+          "type": "label",
+          "label": "SD Card Remaining: 93%",
+          "id": "sdCardRemainingLabel",
+          "position": {
+            "x": 0,
+            "y": 40
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        }
+      ]
+    },
+    {
+      "gui": {
+        "title": "Events Panel",
+        "settings_file": "settings4.xml",
+        "width": 300,
+        "height": 200,
+        "position": {
+          "x": 804, 
+          "y": -15
+        }
+      },
+      "elements": [
+        {
+          "type": "label",
+          "label": "Clipping Events: 3",
+          "id": "clippingLabel",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        },
+        {
+          "type": "label",
+          "label": "Overflow Events: 0",
+          "id": "overflowLabel",
+          "position": {
+            "x": 0,
+            "y": 40
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        }
+      ]
+    },
+    {
+      "gui": {
+        "title": "Note Panel",
+        "settings_file": "settings4.xml",
+        "width": 400,
+        "height": 200,
+        "position": {
+          "x": 1005, 
+          "y": -15
+        }
+      },
+      "elements": [
+        {
+          "type": "label",
+          "label": "Note:       [Add a note]",
+          "id": "noteLabel",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 400,
+            "height": 30
+          }
+        },
+        {
+          "type": "toggle",
+          "label": "LOG NOTE",
+          "id": "logNoteToggle",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 400,
             "height": 30
           },
           "default": false
         }
       ]
+    },
+    {
+      "gui": {
+        "title": "Data Panel",
+        "settings_file": "settings4.xml",
+        "width": 300,
+        "height": 200,
+        "position": {
+          "x": 1206, 
+          "y": -15
+        }
+      },
+      "elements": [
+        {
+          "type": "label",
+          "label": "Send data via: OSC",
+          "id": "dataLabel",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        },
+        {
+          "type": "label",
+          "label": "Output List",
+          "id": "outputLabel",
+          "position": {
+            "x": 0,
+            "y": 40
+          },
+          "size": {
+            "width": 200,
+            "height": 30
+          }
+        }
+      ]
     }
-
-
-
-
+  ]
+}

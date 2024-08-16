@@ -7,11 +7,18 @@ void ofApp::setup() {
 }
 
 void ofApp::update() {
-    // Update logic can be added here if needed
 }
 
 void ofApp::draw() {
+    GLuint defaultTexture;
+    glGenTextures(1, &defaultTexture);
+    glBindTexture(GL_TEXTURE_2D, defaultTexture);
 
-    // Draw the GUI
-    guiManager.getGui().draw();
+    for (auto& panel : guiManager.getPanels()) {
+        panel->draw();
+    }
+
+    glBindTexture(GL_TEXTURE_2D, 0); // Unbind the default texture
+    glDeleteTextures(1, &defaultTexture); // Clean up the texture
 }
+
