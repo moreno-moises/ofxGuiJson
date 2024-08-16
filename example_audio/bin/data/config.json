@@ -1,0 +1,88 @@
+{
+  "panels": [
+    {
+      "gui": {
+        "title": "Dynamic Audio Control",
+        "settings_file": "settings.xml",
+        "width": 500,
+        "height": 700,
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "elements": [
+        {
+          "type": "label",
+          "label": "Control Panel",
+          "id": "controlPanelLabel",
+          "position": {"x": 50, "y": 25},
+          "size": {"width": 240, "height": 50}
+        },
+        {
+          "type": "label",
+          "label": "Cursor Position",
+          "id": "cursorLabel",
+          "position": {"x": 50, "y": 150},
+          "size": {"width": 150, "height": 25}
+        },
+        {
+          "type": "toggle",
+          "label": "220Hz - 440Hz",
+          "id": "freqToggle1",
+          "position": {"x": 50, "y": 250},
+          "size": {"width": 100, "height": 20},
+          "default": false,
+          "action": "onFreqToggle1"
+        },
+        {
+          "type": "toggle",
+          "label": "440Hz - 660Hz",
+          "id": "freqToggle2",
+          "position": {"x": 50, "y": 300},
+          "size": {"width": 100, "height": 20},
+          "default": false,
+          "action": "onFreqToggle2"
+        },
+        {
+          "type": "toggle",
+          "label": "660Hz - 880Hz",
+          "id": "freqToggle3",
+          "position": {"x": 50, "y": 350},
+          "size": {"width": 100, "height": 20},
+          "default": false,
+          "action": "onFreqToggle3"
+        },
+        {
+          "type": "label",
+          "label": "Frequency",
+          "id": "frequencyLabel",
+          "position": {"x": 50, "y": 400},
+          "size": {"width": 150, "height": 25}
+        },
+        {
+          "type": "toggle",
+          "label": "Mute Sound",
+          "id": "muteToggle",
+          "position": {"x": 50, "y": 450},
+          "size": {"width": 80, "height": 20},
+          "default": false,
+          "action": "toggleMute"
+        }
+      ]
+    }
+  ],
+  "audio_settings": {
+    "outputChannels": 2,
+    "inputChannels": 0,
+    "sampleRate": 44100,
+    "bufferSize": 512,
+    "minFrequency": 220,
+    "maxFrequency": 880,
+    "sensitivity": 10
+  },
+  "interaction": {
+    "enable": true,
+    "type": "mouseYFrequency"
+  }
+}
