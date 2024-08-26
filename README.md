@@ -74,6 +74,13 @@ Each action in the JSON file corresponds to a member function in the application
 - **JSON Configuration File**: Acts as the blueprint for the GUI by specifying elements, properties, and action mappings that define the interface.
 - **ofApp.cpp and ofApp.h**: Specific to the application being developed, these files extend the functionality provided by ofxGuiJson. The `.cpp` file defines actions and handles events, particularly focusing on application-specific functionalities. The `.h` file contains necessary class definitions and function declarations related to the specific application needs.
 
+### Lower Level Project Structure Diagram
+
+![image (3)](https://github.com/user-attachments/assets/81d4fe7c-a0dd-470e-8834-1fad57c76138)
+
+This diagram illustrates the modular and event-driven architecture of ofxGuiJson, where GUI actions are tightly integrated with event handling and callback mechanisms, facilitating a responsive and dynamic user interface
+
+
 
 ### Known Issues
 For a list of known issues and feature requests, check the [issues section](https://github.com/moreno-moises/ofxGuiJson/issues) on GitHub. Please report any new issues or bugs you encounter.
