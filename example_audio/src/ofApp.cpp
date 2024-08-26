@@ -1,10 +1,13 @@
 #include "ofApp.h"
 
 void ofApp::setup() {
-    actionMap["toggleMute"] = &ofApp::onToggleChanged;
-    actionMap["onFreqToggle1"] = &ofApp::onFreqToggle1;
-    actionMap["onFreqToggle2"] = &ofApp::onFreqToggle2;
-    actionMap["onFreqToggle3"] = &ofApp::onFreqToggle3;
+    ofLogToConsole(); 
+    ofSetLogLevel(OF_LOG_VERBOSE);
+
+    actionMap["muteToggle"] = &ofApp::onToggleChanged;
+    actionMap["freqToggle1"] = &ofApp::onFreqToggle1;
+    actionMap["freqToggle2"] = &ofApp::onFreqToggle2;
+    actionMap["freqToggle3"] = &ofApp::onFreqToggle3;
 
     ofAddListener(guiManager.onToggleEvent, this, &ofApp::handleGuiJsonToggle);
     guiManager.setup("config.json"); //pass contents as string instead of file and handle multiple json loading

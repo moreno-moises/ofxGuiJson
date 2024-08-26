@@ -1,14 +1,14 @@
 
 #include "ofxGuiJson.h"
 
-void ofxGuiJson::setup(const std::string& configFile) {
-    loadJson(configFile);
+void ofxGuiJson::setup(const std::string& path) {
+    std::string fullPath = ofToDataPath(path, true);  // Resolve the full path here
+    loadJson(fullPath);  // Pass the full path to loadJson
     setBackgroundColor();  // Set background color based on JSON config
     parseGuiElements();
 }
 
-void ofxGuiJson::loadJson(const std::string& relativePath) {
-    std::string fullPath = ofToDataPath(relativePath, true);
+void ofxGuiJson::loadJson(const std::string& fullPath) {
     std::ifstream i(fullPath);
     if (!i.is_open()) {
         ofLogError() << "Failed to open JSON config file: " << fullPath;
@@ -27,6 +27,7 @@ void ofxGuiJson::loadJson(const std::string& relativePath) {
         ofLogError() << "Exception parsing JSON: " << e.what();
     }
 }
+
 
 void ofxGuiJson::parseGuiElements() {
     if (config.is_null()) {
@@ -124,7 +125,7 @@ void ofxGuiJson::onToggleAction(bool& state) {
                 std::string action = "";
                 for (const auto& el : config["panels"][0]["elements"]) {
                     if (el.contains("id") && el["id"].get<std::string>() == id) {
-                        action = el.value("action", "");
+                        action = el.value("id", "");
                         break;
                     }
                 }
