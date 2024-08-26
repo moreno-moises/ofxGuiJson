@@ -1,6 +1,9 @@
 #include "ofApp.h"
 
 void ofApp::setup() {
+    ofLogToConsole(); 
+    ofSetLogLevel(OF_LOG_VERBOSE);
+
     // Set up the GUI manager with the configuration file
     guiManager.setup("config.json");
 
