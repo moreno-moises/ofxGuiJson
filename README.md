@@ -98,7 +98,3 @@ As ofxGuiJson continues to evolve, the following are key enhancements planned fo
 7. **Responsive Design**: Adapt GUI widths as percentages to maintain layout integrity when resizing windows.
 8. **Propagation of Positions and Dimensions in Multiple Panels**: Ensure consistent layout across multiple panels.
 9. **Enhanced File Loading**: Allow loading multiple JSON files, facilitating easier customization and scalability.
-
-
-
-
