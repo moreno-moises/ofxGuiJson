@@ -81,9 +81,24 @@ Each action in the JSON file corresponds to a member function in the application
 This diagram illustrates the modular and event-driven architecture of ofxGuiJson, where GUI actions are tightly integrated with event handling and callback mechanisms, facilitating a responsive and dynamic user interface
 
 
-
 ### Known Issues
 For a list of known issues and feature requests, check the [issues section](https://github.com/moreno-moises/ofxGuiJson/issues) on GitHub. Please report any new issues or bugs you encounter.
+
+### Future Work
+As ofxGuiJson continues to evolve, the following are key enhancements planned for future versions, aimed at making the GUI more flexible and user-friendly:
+1. **Implement note adding (log note) with ofxTextField** - Allow users to add notes directly within the GUI.
+2. **Font Customization Features**:
+   - **Color**: Enable changing font colors.
+   - **Size**: Adjust font sizes for better readability.
+   - **Type**: Incorporate various font types to enhance GUI aesthetics.
+3. **GUI Groups**: Organize elements into logical groups for better management.
+4. **Multi-Select and Single-Select Lists**: Implement systems for selecting multiple options from lists, enhancing JSON compatibility.
+5. **Device Connection Conditionals**: Add GUI elements that react based on device connectivity.
+6. **Toggle Enabling/Disabling**: Provide options to disable or enable toggles dynamically.
+7. **Responsive Design**: Adapt GUI widths as percentages to maintain layout integrity when resizing windows.
+8. **Propagation of Positions and Dimensions in Multiple Panels**: Ensure consistent layout across multiple panels.
+9. **Enhanced File Loading**: Allow loading multiple JSON files, facilitating easier customization and scalability.
+
 
 
 
